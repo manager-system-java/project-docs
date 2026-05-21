@@ -35,7 +35,7 @@ O projeto foi desenvolvido seguindo boas práticas do mercado, como:
 | Spring Boot | Framework da API REST |
 | Spring Security | Autenticação e autorização |
 | JWT | Tokens de acesso |
-| PostgreSQL | Banco de dados |
+| PostgreSQL(Supabase) | Banco de dados |
 | Spring Data JPA | Mapeamento objeto-relacional |
 | Lombok | Redução de boilerplate |
 | Maven | Gerenciador de dependências |
