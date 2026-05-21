@@ -91,7 +91,7 @@ O projeto foi desenvolvido seguindo boas práticas do mercado, como:
 - Acesso total ao sistema
 - Gerencia todos os usuários
 - Altera roles
-- 
+  
 ### 📋 Gerente
 - Gerencia e cria os projetos
 - Visualiza e edita equipes
