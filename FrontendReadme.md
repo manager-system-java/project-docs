@@ -72,59 +72,13 @@ Interface web do **Rocket Manager**, um sistema de gestão de projetos que permi
 | Tela | Rota | Acesso |
 |---|---|---|
 | Login | `/login` | Público |
-| Cadastro | `/cadastro` | Público |
-| Dashboard | `/dashboard` | Todos autenticados |
-| Usuários | `/usuarios` | ADMIN |
-| Projetos | `/projetos` | Todos autenticados |
-| Equipes | `/equipes` | Todos autenticados |
+| Cadastro | `/signup` | Público |
+| Visualização dos projetos | `/home` | User |
+| Projetos | `/projects` | Gerente, ADMIN |
+| Dashboard | `/adm` | ADMIN |
 
 ---
 
-## 🚀 Como Rodar Localmente
-
-### Pré-requisitos
-
-- Node.js 18+
-- Angular CLI instalado
-- VS Code (recomendado)
-- Back-end rodando em `http://localhost:8080`
-
-### Passo a passo
-
-**1. Clone o repositório**
-```bash
-git clone https://github.com/manager-system-java/manager-system-java.git
-cd manager-system-java
-```
-
-**2. Instale as dependências**
-```bash
-npm install
-```
-
-**3. Configure a URL da API**
-
-No arquivo `environment.ts`:
-```typescript
-export const environment = {
-  production: false,
-  apiUrl: 'http://localhost:8080'
-};
-```
-
-**4. Rode o projeto**
-```bash
-ng serve
-```
-
-**5. Acesse no navegador:**
-```
-http://localhost:4200
-```
-
-> ⚠️ O back-end precisa estar rodando para o sistema funcionar
-
----
 
 ## 🗺️ Roadmap
 
@@ -132,23 +86,18 @@ http://localhost:4200
 - [x] Tela de Login
 - [x] Tela de Cadastro
 - [x] Integração com autenticação JWT
-- [ ] Dashboard principal
-- [ ] Tela de Usuários
-- [ ] Tela de Projetos
-- [ ] Tela de Equipes
-- [ ] Guards de rota por role
+- [x] Dashboard principal
+- [x] Tela de Usuários
+- [x] Tela de Projetos e equipes
+- [x] Guards de rota por role
 - [ ] Deploy (Netlify)
+- [x] Documentação
 
 ---
 
 ## 🌐 Deploy
 
 ### Em desenvolvimento — o deploy será realizado na plataforma **Netlify**
-
-**Variável de ambiente necessária para produção:**
-```
-API_URL=url_da_api_em_producao
-```
 
 ---
 
