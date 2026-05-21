@@ -117,124 +117,23 @@ O **Rocket Manager** é um sistema web de gestão de projetos que permite gerenc
 7. Acesso liberado ou negado (403)
 ```
 
----
-
-## 🚀 Como Rodar Localmente
-
-### Pré-requisitos
-
-- Java 17+
-- Maven
-- PostgreSQL instalado e rodando
-- IntelliJ IDEA (recomendado)
-
-### Passo a passo
-
-**1. Clone o repositório**
-```bash
-git clone https://github.com/manager-system-java/manager-system-java-backend-api.git
-cd manager-system-java-backend-api
-```
-
-**2. Configure o banco de dados**
-
-Crie um banco no PostgreSQL:
-```sql
-CREATE DATABASE manager_system;
-```
-
-**3. Configure o `application.properties`**
-```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/manager_system
-spring.datasource.username=seu_usuario
-spring.datasource.password=sua_senha
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
-
-api.security.token.secret=sua_chave_secreta_jwt
-```
-
-**4. Rode o projeto**
-
-Pelo IntelliJ: clique em **Run** na classe principal
-
-Ou pelo terminal:
-```bash
-mvn spring-boot:run
-```
-
-**5. A API estará disponível em:**
-```
-http://localhost:8080
-```
-
----
-
-## 📡 Endpoints Disponíveis
-
-### Autenticação (público)
-
-| Método | Endpoint | Descrição |
-|---|---|---|
-| POST | `/auth/register` | Cadastrar novo usuário |
-| POST | `/auth/login` | Fazer login e receber token |
-
-### Usuários (autenticado)
-
-| Método | Endpoint | Descrição | Role |
-|---|---|---|---|
-| GET | `/usuarios` | Listar todos | ADMIN |
-| GET | `/usuarios/{id}` | Buscar por ID | ADMIN |
-| PUT | `/usuarios/{id}` | Editar usuário | ADMIN |
-| DELETE | `/usuarios/{id}` | Desativar usuário | ADMIN |
-
-### Projetos (autenticado)
-
-| Método | Endpoint | Descrição | Role |
-|---|---|---|---|
-| POST | `/projetos` | Criar projeto | ADMIN |
-| GET | `/projetos` | Listar projetos | Todos |
-| GET | `/projetos/{id}` | Detalhar projeto | Todos |
-| PUT | `/projetos/{id}` | Editar projeto | ADMIN, GERENTE |
-| PATCH | `/projetos/{id}/status` | Alterar status | ADMIN, GERENTE |
-
-### Equipes (autenticado)
-
-| Método | Endpoint | Descrição | Role |
-|---|---|---|---|
-| POST | `/equipes` | Criar equipe | ADMIN, GERENTE |
-| GET | `/equipes` | Listar equipes | Todos |
-| GET | `/equipes/{id}` | Detalhar equipe | Todos |
-| POST | `/equipes/{id}/membros` | Adicionar membro | ADMIN |
-| DELETE | `/equipes/{id}/membros/{userId}` | Remover membro | ADMIN |
-
----
-
 ## 🗺️ Roadmap
 
 - [x] Autenticação com JWT
 - [x] Cadastro e login de usuários
 - [x] Controle de acesso por roles (ADMIN, GERENTE, COLABORADOR)
-- [ ] CRUD completo de Usuários
-- [ ] CRUD completo de Projetos
-- [ ] CRUD completo de Equipes
+- [x] CRUD completo de Usuários
+- [x] CRUD completo de Projetos
+- [x] CRUD completo de Equipes
 - [ ] Deploy da API (Railway)
-- [ ] Documentação Swagger
-- [ ] Integração com Front-end
+- [x] Documentação
+- [x] Integração com Front-end
 
 ---
 
 ## 🌐 Deploy
 
 ### Em desenvolvimento — o deploy será realizado na plataforma **Railway**
-
-**Variáveis de ambiente necessárias para produção:**
-```
-DATABASE_URL=
-DATABASE_USERNAME=
-DATABASE_PASSWORD=
-JWT_SECRET=
-```
 
 ---
 
