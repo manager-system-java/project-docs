@@ -64,13 +64,13 @@ O projeto foi desenvolvido seguindo boas práticas do mercado, como:
 ```
 ┌─────────────────────────────────────┐
 │         Front-end (Angular)         │
-│           Netlify                   │
+│                                     │
 └──────────────┬──────────────────────┘
                │ HTTPS + JWT
                ▼
 ┌─────────────────────────────────────┐
 │       API REST (Spring Boot)        │
-│            Railway                  │
+│                                     │
 │                                     │
 │  Controller → Service → Repository  │
 │  Spring Security + JWT Filter       │
@@ -78,8 +78,8 @@ O projeto foi desenvolvido seguindo boas práticas do mercado, como:
                │
                ▼
 ┌─────────────────────────────────────┐
-│            PostgreSQL               │
-│            Railway                  │
+│       PostgreSQL(Supabase)          │
+│                                     │
 └─────────────────────────────────────┘
 ```
 
@@ -89,18 +89,18 @@ O projeto foi desenvolvido seguindo boas práticas do mercado, como:
 
 ### 👑 Administrador
 - Acesso total ao sistema
-- Cadastra e gerencia todos os usuários
-- Cria projetos e define gerentes responsáveis
-- Cria equipes e gerencia membros
-
+- Gerencia todos os usuários
+- Altera roles
+- 
 ### 📋 Gerente
-- Gerencia seus próprios projetos
+- Gerencia e cria os projetos
 - Visualiza e edita equipes
 - Acompanha o status dos projetos
 
 ### 👤 Colaborador
-- Visualiza os projetos que participa
-- Visualiza sua equipe
+- Visualiza os projetos que participa e os outros projetos disponíveis
+- Visualiza as equipes
+- Solicita a participação nos projetos
 - Acesso somente leitura
 
 ---
@@ -215,49 +215,22 @@ POST   /equipes/{id}/projetos/{projetoId} → Vincula ao projeto (ADMIN, GERENTE
 - [x] Autenticação com JWT
 - [x] Cadastro e login de usuários
 - [x] Controle de acesso por roles
-- [ ] CRUD completo de Usuários
-- [ ] CRUD completo de Projetos
-- [ ] CRUD completo de Equipes
+- [x] CRUD completo de Usuários
+- [x] CRUD completo de Projetos
+- [x] CRUD completo de Equipes
+- [x] Documentação
 - [ ] Deploy no Railway
-- [ ] Documentação Swagger
 
 ### Front-end
 - [x] Configuração do projeto Angular
 - [x] Tela de Login
 - [x] Tela de Cadastro
-- [ ] Dashboard
-- [ ] Tela de Usuários
-- [ ] Tela de Projetos
-- [ ] Tela de Equipes
-- [ ] Guards por role
+- [x] Dashboard de usuários
+- [x] Tela de Usuários
+- [x] Tela de Projetos e equipes
+- [x] Guards por role
+- [x] Documentação
 - [ ] Deploy no Netlify
-
----
-
-## 🚀 Como Rodar o Projeto Completo
-
-### 1. Sobe o banco de dados
-```sql
-CREATE DATABASE manager_system;
-```
-
-### 2. Sobe o back-end
-```bash
-git clone https://github.com/manager-system-java/manager-system-java-backend-api.git
-cd manager-system-java-backend-api
-# configure o application.properties
-mvn spring-boot:run
-# API disponível em http://localhost:8080
-```
-
-### 3. Sobe o front-end
-```bash
-git clone https://github.com/manager-system-java/manager-system-java.git
-cd manager-system-java
-npm install
-ng serve
-# Interface disponível em http://localhost:4200
-```
 
 ---
 
@@ -266,14 +239,14 @@ ng serve
 | Sprint | Descrição | Status |
 |---|---|---|
 | Sprint 1 | Back-end: Login, registro, JWT e Roles | ✅ Concluída |
-| Sprint 2 | Back-end: CRUD de Usuários | 🔄 Em andamento |
-| Sprint 3 | Back-end: CRUD de Projetos | ⏳ Pendente |
-| Sprint 4 | Back-end: CRUD de Equipes | ⏳ Pendente |
-| Sprint 5 | Banco de Dados em Produção | ⏳ Pendente |
+| Sprint 2 | Back-end: CRUD de Usuários | ✅ Concluída |
+| Sprint 3 | Back-end: CRUD de Projetos | ✅ Concluída |
+| Sprint 4 | Back-end: CRUD de Equipes | ✅ Concluída |
+| Sprint 5 | Banco de Dados em Produção | ✅ Concluída |
 | Sprint 6 | Deploy do Back-end | ⏳ Pendente |
-| Sprint 7 | Front-end | ⏳ Pendente |
+| Sprint 7 | Front-end | ✅ Concluída |
 | Sprint 8 | Deploy do Front-end | ⏳ Pendente |
-| Sprint 9 | Documentação e Qualidade | ⏳ Pendente |
+| Sprint 9 | Documentação e Qualidade | ✅ Concluída |
 
 ---
 
