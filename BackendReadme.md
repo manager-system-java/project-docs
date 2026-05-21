@@ -15,7 +15,7 @@ O **Rocket Manager** é um sistema web de gestão de projetos que permite gerenc
 
 | Perfil | Permissões |
 |---|---|
-| 👑 Administrador | Acesso total — gerencia usuários, projetos e equipes |
+| 👑 Administrador | Acesso total — gerencia usuários e as suas permissões|
 | 📋 Gerente | Gerencia seus próprios projetos e equipes |
 | 👤 Colaborador | Visualização dos projetos e equipes que participa |
 
@@ -27,7 +27,7 @@ O **Rocket Manager** é um sistema web de gestão de projetos que permite gerenc
 - **Spring Boot** — framework para construção da API REST
 - **Spring Security** — autenticação e controle de acesso
 - **JWT (JSON Web Token)** — autenticação stateless
-- **PostgreSQL** — banco de dados relacional
+- **PostgreSQL** no banco de dados **Supabase** — banco de dados relacional
 - **Spring Data JPA / Hibernate** — mapeamento objeto-relacional
 - **Lombok** — redução de código repetitivo
 - **Maven** — gerenciador de dependências
