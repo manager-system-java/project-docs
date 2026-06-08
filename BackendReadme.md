@@ -125,15 +125,14 @@ O **Rocket Manager** é um sistema web de gestão de projetos que permite gerenc
 - [x] CRUD completo de Usuários
 - [x] CRUD completo de Projetos
 - [x] CRUD completo de Equipes
-- [ ] Deploy da API (Railway)
+- [X] Deploy da API (Railway)
 - [x] Documentação
 - [x] Integração com Front-end
 
 ---
 
-## 🌐 Deploy
-
-### Em desenvolvimento — o deploy será realizado na plataforma **Railway**
+## 🌐 Deploy 
+[Rocket Manager](https://gestao-de-projetos.netlify.app/)
 
 ---
 
