@@ -90,14 +90,13 @@ Interface web do **Rocket Manager**, um sistema de gestão de projetos que permi
 - [x] Tela de Usuários
 - [x] Tela de Projetos e equipes
 - [x] Guards de rota por role
-- [ ] Deploy (Netlify)
+- [x] Deploy (Netlify)
 - [x] Documentação
 
 ---
 
 ## 🌐 Deploy
-
-### Em desenvolvimento — o deploy será realizado na plataforma **Netlify**
+[Rocket Manager](https://gestao-de-projetos.netlify.app/)
 
 ---
 
